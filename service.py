@@ -55,9 +55,9 @@ class CounterService:
         self.beverages.append(Beverage("Grolsch", 12.0, 18, True))
 
     def print_all_orders(self):
-        result = ""
+        result = list()
         for order in self.orders:
-            result += self.interface.print_order(order) + "\n"
+            result.append(self.interface.print_order(order))
         return result
 
     def handle_new_order(self, order: OrderRequest):
